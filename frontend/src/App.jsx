@@ -11,19 +11,16 @@ const App=()=> {
     <>
     <Routes>
       <Route path="/admin/*"
-      elements={
+      element={
         <ProtectedRoute>
            <AdminRoutes/>
         </ProtectedRoute>
       }
       />
     </Routes>
-   
-
-    <Admin/>
     </>
   )
-}
+};
 
 const AdminRoutes = () => {
   return(

@@ -40,15 +40,15 @@ const Admin = () => {
             </tr>
           </thead>
           <tbody>
-            {food.map((foodItem, index) => (
+            {food.map((food, index) => (
               <tr key={food._id} className='bg-white hover:bg-gray-400'>
                 <td className='py-3 px-5'>{index + 1}</td>
-                <td className='py-3 px-5'>{foodItem.name}</td>
-                <td className='py-3 px-5'>{foodItem.priceInCents}</td>
+                <td className='py-3 px-5'>{food.name}</td>
+                <td className='py-3 px-5'>{food.priceInCents}</td>
                 <td className='py-3 px-5'>
                   <div>
-                    <Link to="/" className='bg-orange-500 hover:bg-orange-900 text-white py-2 px-4 mx-1 font-medium rounded-l-lg text-sm'>Edit</Link>
-                    <Link to="/" className='bg-red-500 hover:bg-red-900 text-white py-2 px-4 mx-1 font-medium rounded-r-lg text-sm'>Delete</Link>
+                    <Link to={`/admin/food/edit/${food._id}`} className='bg-orange-500 hover:bg-orange-900 text-white py-2 px-4 mx-1 font-medium rounded-l-lg text-sm'>Edit</Link>
+                    <Link to={`/admin/food/delete/${food._id}`} className='bg-red-500 hover:bg-red-900 text-white py-2 px-4 mx-1 font-medium rounded-r-lg text-sm'>Delete</Link>
                   </div>
                 </td>
               </tr>
